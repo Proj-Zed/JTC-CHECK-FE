@@ -1,0 +1,134 @@
+*{
+    overflow: hidden;
+}
+.main {
+    height: auto;
+    width: auto;
+    background-color: #DBE2EF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Left Side View */
+.left-bar{
+    height: 100%;
+    width: 350px;
+    background-color: #112D4E;
+    display: none;
+}
+.logo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    
+}
+.side-nav-tabs{
+    width: 100%;
+    height: 580px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+}
+.sideBtnTabs{
+    width: 80%;
+    height: 80px;
+    border: none;
+    color: white;
+    background-color: transparent;
+    font-size: 20px;
+    border-bottom: 1px solid white;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* Button Animation in Side Bar */
+.sideBtnTabs .spanBtn{
+    cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.sideBtnTabs .spanBtn:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.sideBtnTabs:hover .spanBtn{
+    padding-right: 25px;
+}
+.sideBtnTabs:hover .spanBtn:after{
+    opacity: 1;
+    right: 0;
+}
+/* End Of Animation */
+.logoutButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+    height: 180px;
+}
+
+/* Right side View */
+.rightView{
+    height: 100vh;
+    width: calc(100% - 350px);
+    display: none;
+}
+.rightViewTop{
+    width: 100%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.overviewContent{
+    width: 50%;
+    height: auto;
+ 
+    padding: 20px;
+    position: absolute;
+    top: 50;
+    left: 50;
+}
+.conclusionContent{
+    width: 50%;
+    height: auto;
+   
+    padding: 20px;
+    position: absolute;
+    bottom: 50;
+    right: 50;
+}
+.imgBackground{
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 80;
+ 
+}
+.imgBackgroundPig{
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    bottom: 50;
+    left: 0;
+   
+}
+.rightViewBottom{
+    width: 100%;
+    height: 5%;
+    border: 2px solid red;
+    position: fixed;
+    bottom: 0;
+}
