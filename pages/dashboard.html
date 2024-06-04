@@ -347,15 +347,78 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            ...
+            <div class="row">
+              <div class="col">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingAccountName" placeholder="Account Name">
+                  <label for="floatingAccountName">Account Name</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingAccountNo" placeholder="Account No">
+                  <label for="floatingAccountNo">Account No.</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingBank" placeholder="Bank">
+                  <label for="floatingBank">Bank</label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingContact" placeholder="Contact">
+                  <label for="floatingContact">Contact</label>
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingAddress" placeholder="Address">
+                  <label for="floatingAddress">Address</label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingTelephoneNo" placeholder="Telephone No.">
+                  <label for="floatingTelephoneNo">Telephone No.</label>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-floating">
+                  <input type="text" class="form-control" id="floatingDateOpened" placeholder="MM/DD/YYYY">
+                  <label for="floatingDateOpened">Date Opened</label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col">
+                <div class="form-floating">
+                  <input type="number" class="form-control" id="floatingBeginningBalance" placeholder="Beginning Balance">
+                  <label for="floatingBeginningBalance">Beginning Balance</label>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col">
+                <div class="form-floating">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingAccountRemarks" style="height: 100px"></textarea>
+                  <label for="floatingAccountRemarks">Remarks</label>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn" style="background-color: #112D4E; color: white;">Save changes</button>
           </div>
         </div>
       </div>
-    </div>
+      </div>
     <script src="../assets/js/scriptForButtons.js"></script>
     <script src="../assets/js/sweetalert2.all.mis.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
@@ -366,5 +429,6 @@
     ></script>
     <script src="../assets/js/scriptAssets.js"></script>
     <script src="../assets/js/scriptForFooter.js"></script>
+    <script src="../assets/js/modals/AccountModal/AddAccountModal.js"></script>
   </body>
 </html>
