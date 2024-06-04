@@ -1,0 +1,132 @@
+.rightViewAccount {
+  height: 95%;
+  width: 100%;
+}
+.rightViewAccountHeader {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rightViewAccountTop {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rightViewAccountTopLeft {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.rightViewAccountTopLeftTop {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.rightViewAccountTopLeftBottom {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10%;
+}
+
+.rightViewAccountTopRight {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.headerTableBox {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: end;
+  justify-content: start;
+  padding-left: 5%;
+}
+.tableBox {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tableWrapper {
+  width: 95%;
+  height: 95%;
+  overflow: auto;
+}
+.assignTable {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: #f9f7f7;
+}
+
+.assignTable th {
+  background-color: #112d4e;
+  padding: 15px;
+  color: white;
+  text-align: start;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+.assignTable td {
+  height: 50px;
+  padding: 15px;
+  border: 3px solid #dbe2ef;
+  white-space: nowrap;
+}
+.rightViewAccountBottom {
+  height: 50%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainTableAccountWrapper {
+  height: 80%;
+  width: 95%;
+  overflow: auto;
+}
+.mainTableAccount {
+  width: auto;
+  height: 100%;
+  overflow: auto;
+  background-color: #f9f7f7;
+  border-collapse: collapse;
+  table-layout: auto;
+}
+.mainTableAccount th {
+  background-color: #112d4e;
+  padding: 15px;
+  color: white;
+  text-align: start;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: auto;
+  white-space: nowrap;
+}
+.mainTableAccount td {
+  height: 50px;
+  padding: 15px;
+  border: 3px solid #dbe2ef;
+  white-space: nowrap;
+}

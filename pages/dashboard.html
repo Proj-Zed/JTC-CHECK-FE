@@ -15,13 +15,15 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../styles/sweetalert2.min.css">
     <link rel="stylesheet" href="../styles/dashboard.css" />
     <link rel="stylesheet" href="../styles/fontStyles.css" />
+    <link rel="stylesheet" href="../styles/account.css">
 
     <title>JTC CHECK</title>
   </head>
   <body>
-    <div class="main">
+    <div class="mainDashBoard">
         <dotlottie-player src="../assets/json/armLoading.json" class="loader" style="position: absolute;"  background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
       <!-- Left Nav Bar / Side Bar -->
       <div class="left-bar">
@@ -50,7 +52,7 @@
         </div>
         <!-- Logout Btns -->
         <div class="logoutButton">
-          <button type="button" class="btn btn-outline-danger poppins-extrabold">
+          <button type="button" class="btn btn-outline-danger btn-lg poppins-extrabold">
           Sign Out
           </button>
         </div>
@@ -89,28 +91,280 @@
                     <img class="imgBackgroundPig"  src="../assets/images/savings.svg" alt="savings-pig-picture">
                 </div>
             </div>
-
-
-
-
+            <!-- Main View For Transactions -->
             
-            <div class="rightViewBottom">
+            <!-- Main View For Accounts -->
+            <div class="rightViewAccount ">
+              <!-- Accounts Header -->
+              <div class="rightViewAccountHeader">
+                  <h1 class="poppins-black display-3">Bank Accounts</h1>
+              </div>
+                <div class="rightViewAccountTop">
+                      <div class="rightViewAccountTopLeft">
+                        <div class="rightViewAccountTopLeftTop">
+                          <button id="myButton" type="button" class="btn btn-outline-success btn-lg poppins-regular" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Account</button>
+                          <button id="bankAccountDelete" type="button" class="btn btn-outline-danger btn-lg poppins-regular">Delete Account</button>
+                          <button type="button" class="btn btn-outline-info btn-lg poppins-regular">Edit Account</button>
+                          <button type="button" class="btn btn-outline-primary btn-lg poppins-regular">Assign Account</button>
+                        </div>
+                        <div class="rightViewAccountTopLeftBottom">
+                          <div class="input-group mb-3">
+                            <input type="text" class="form-control poppins-light" placeholder="Input Account Name To Search..." aria-label="Example text with button addon" aria-describedby="button-addon1">
+                            <button class="btn btn-outline-primary btn-lg poppins-regular" type="button" id="button-addon1">Search</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="rightViewAccountTopRight">
+                        <div class="headerTableBox">
+                          <h4 class="poppins-semibold ">Assigned user/'s to the selected Account</h4>
+                        </div>
+                        <div class="tableBox">
+                          <div class="tableWrapper">
+                            <table class="assignTable">
+                              <thead>
+                                <tr>
+                                  <th>User uuid</th>
+                                  <th>Fullname</th>
+                                  <th>Username</th>
+                                </tr>
+                              </thead>
+                              <tr>
+                                <td>8203c03f-252c-415f-9cb1-06fa37e7eb06</td>
+                                <td>Cedrick James Pogi 0</td>
+                                <td>CjPogi</td>
+                              </tr>
+                              <tr>
+                                <td>8203c03f-252c-415f-9cb1-06fa37e7eb06</td>
+                                <td>Cedrick James Pogi 1</td>
+                                <td>CjPogi</td>
+                              </tr>
+                              <tr>
+                                <td>8203c03f-252c-415f-9cb1-06fa37e7eb06</td>
+                                <td>Cedrick James Pogi 2</td>
+                                <td>CjPogi</td>
+                              </tr>
+                              <tr>
+                                <td>8203c03f-252c-415f-9cb1-06fa37e7eb06</td>
+                                <td>Cedrick James Pogi 3</td>
+                                <td>CjPogi</td>
+                              </tr>
+                              <tr>
+                                <td>8203c03f-252c-415f-9cb1-06fa37e7eb06</td>
+                                <td>Cedrick James Pogi 4</td>
+                                <td>CjPogi</td>
+                              </tr>
+                              <tr>
+                                <td>8203c03f-252c-415f-9cb1-06fa37e7eb06</td>
+                                <td>Cedrick James Pogi 5</td>
+                                <td>CjPogi</td>
+                              </tr>
+                              <tr>
+                                <td>8203c03f-252c-415f-9cb1-06fa37e7eb06</td>
+                                <td>Cedrick James Pogi 6</td>
+                                <td>CjPogi</td>
+                              </tr>
+                            </table>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rightViewAccountBottom">
+                  <div class="mainTableAccountWrapper">
+                    <table class="mainTableAccount">
+                      <thead>
+                        <tr>
+                        <th>Account Code</th>
+                        <th>Account UUID</th>
+                        <th>Entry Date</th>
+                        <th>Account Name</th>
+                        <th>Account No</th>
+                        <th>Bank</th>
+                        <th>Address</th>
+                        <th>Contact</th>
+                        <th>Telephone No.</th>
+                        <th>Date Opened</th>
+                        <th>Beginning Balance</th>
+                        <th>Remarks</th>
+                        <th>Records</th>
+                        <th>Debit</th>
+                        <th>Credit</th>
+                        <th>Difference</th>
+                        <th>In Use</th>
+                        </tr>
+                      </thead>
+                      <tr>
+                        <td>1</td>
+                        <td>8203c03f-252c-415f-9cb1-06fa37e7eb06</td>
+                        <td>July 33, 2100</td>
+                        <td>Cedrick James Pogi</td>
+                        <td>8203c03f-252c-415f-9cb1-06fa37e7eb06</td>
+                        <td>Metrobank</td>
+                        <td>Vigan City Ilocos Sur</td>
+                        <td>Lemonn Seedling</td>
+                        <td>128732783652</td>
+                        <td>July 33, 2100</td>
+                        <td>1000000000</td>
+                        <td>Wala</td>
+                        <td>1000000000</td>
+                        <td>1000000000</td>
+                        <td>1000000000</td>
+                        <td>1000000000</td>
+                        <td>True</td>
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>8203c03f-252c-415f-9cb1-06fa37e7eb06</td>
+                        <td>July 33, 2100</td>
+                        <td>Cedrick James Pogi</td>
+                        <td>8203c03f-252c-415f-9cb1-06fa37e7eb06</td>
+                        <td>Metrobank</td>
+                        <td>Vigan City Ilocos Sur</td>
+                        <td>Lemonn Seedling</td>
+                        <td>128732783652</td>
+                        <td>July 33, 2100</td>
+                        <td>1000000000</td>
+                        <td>Wala</td>
+                        <td>1000000000</td>
+                        <td>1000000000</td>
+                        <td>1000000000</td>
+                        <td>1000000000</td>
+                        <td>True</td>
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>8203c03f-252c-415f-9cb1-06fa37e7eb06</td>
+                        <td>July 33, 2100</td>
+                        <td>Cedrick James Pogi</td>
+                        <td>8203c03f-252c-415f-9cb1-06fa37e7eb06</td>
+                        <td>Metrobank</td>
+                        <td>Vigan City Ilocos Sur</td>
+                        <td>Lemonn Seedling</td>
+                        <td>128732783652</td>
+                        <td>July 33, 2100</td>
+                        <td>1000000000</td>
+                        <td>Wala</td>
+                        <td>1000000000</td>
+                        <td>1000000000</td>
+                        <td>1000000000</td>
+                        <td>1000000000</td>
+                        <td>True</td>
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td>8203c03f-252c-415f-9cb1-06fa37e7eb06</td>
+                        <td>July 33, 2100</td>
+                        <td>Cedrick James Pogi</td>
+                        <td>8203c03f-252c-415f-9cb1-06fa37e7eb06</td>
+                        <td>Metrobank</td>
+                        <td>Vigan City Ilocos Sur</td>
+                        <td>Lemonn Seedling</td>
+                        <td>128732783652</td>
+                        <td>July 33, 2100</td>
+                        <td>1000000000</td>
+                        <td>Wala</td>
+                        <td>1000000000</td>
+                        <td>1000000000</td>
+                        <td>1000000000</td>
+                        <td>1000000000</td>
+                        <td>True</td>
+                      </tr>
+                      <tr>
+                        <td>5</td>
+                        <td>8203c03f-252c-415f-9cb1-06fa37e7eb06</td>
+                        <td>July 33, 2100</td>
+                        <td>Cedrick James Pogi</td>
+                        <td>8203c03f-252c-415f-9cb1-06fa37e7eb06</td>
+                        <td>Metrobank</td>
+                        <td>Vigan City Ilocos Sur</td>
+                        <td>Lemonn Seedling</td>
+                        <td>128732783652</td>
+                        <td>July 33, 2100</td>
+                        <td>1000000000</td>
+                        <td>Wala</td>
+                        <td>1000000000</td>
+                        <td>1000000000</td>
+                        <td>1000000000</td>
+                        <td>1000000000</td>
+                        <td>True</td>
+                      </tr>
+                      <tr>
+                        <td>6</td>
+                        <td>8203c03f-252c-415f-9cb1-06fa37e7eb06</td>
+                        <td>July 33, 2100</td>
+                        <td>Cedrick James Pogi</td>
+                        <td>8203c03f-252c-415f-9cb1-06fa37e7eb06</td>
+                        <td>Metrobank</td>
+                        <td>Vigan City Ilocos Sur</td>
+                        <td>Lemonn Seedling</td>
+                        <td>128732783652</td>
+                        <td>July 33, 2100</td>
+                        <td>1000000000</td>
+                        <td>Wala</td>
+                        <td>1000000000</td>
+                        <td>1000000000</td>
+                        <td>1000000000</td>
+                        <td>1000000000</td>
+                        <td>True</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+            </div>
+            <!-- Main View For Salesman -->
 
+            <!-- Main View For Payee / Supplier -->
+
+            <!-- Main View For Bank -->
+
+            <!-- Main View For Users -->
+
+            <!-- Main View For Return Check Reasons -->
+
+            <!-- Main View For Holidays -->
+
+            <div class="rightViewBottom">
+                <div class="footerOne">
+                    <h6>JTC CHECKS MANAGEMENT SYSTEM</h6>
+                </div>
+                <div class="footerTwo">
+                  <h6 id="loggedInUser">xXxUserFullnamexXx</h6>
+                </div>
+                <div class="footerThree">
+                  <h6 id="timeHeading">xXxHH:MM:SSxXx</h6>
+                </div>
+                <div class="footerFour">
+                  <h6 id="dateHeading">xXxMM/DD/YYYYxXx</h6>
+                </div>
             </div>
       </div>
     </div>
+    <!-- Modal for Add Account -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Add Account</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../assets/js/scriptForButtons.js"></script>
+    <script src="../assets/js/sweetalert2.all.mis.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script>
-        $(window).on('load', function(){
-            $(".loader").fadeOut(1000);
-            $(".left-bar").fadeIn(1000);
-            $(".rightView").fadeIn(1000);
-        })
-    </script>
+    <script src="../assets/js/scriptAssets.js"></script>
+    <script src="../assets/js/scriptForFooter.js"></script>
   </body>
 </html>
