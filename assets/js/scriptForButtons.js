@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
         confirmButtonColor: "#112D4E",
         cancelButtonColor: "#d33",
         confirmButtonText: "Yes, delete it!",
+        cancelButtonText: "Wag, Ayaw ko!"
       }).then((result) => {
         if (result.isConfirmed) {
           //TODO => SQL LOGIC DELETE HERE
@@ -24,4 +25,14 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
+
+    //TODO => Add Account Function
+    document.getElementById("saveAccount").addEventListener("click", function() {
+        Swal.fire({
+            title: "The Internet?",
+            text: "That thing is still around?",
+            icon: "question",
+            confirmButtonColor: "#112D4E",
+        });
+    })
 });
